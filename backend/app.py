@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 import time
+
 from fastapi.middleware.cors import CORSMiddleware
+
 from pipeline.intent import extract_intent
 from pipeline.planner import create_architecture
 from pipeline.generator import generate_config
@@ -16,25 +18,23 @@ from runtime.executor import runtime_preview
 
 app = FastAPI()
 
+# ✅ CORS FIX (IMPORTANT for Vercel frontend)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173"
-    ],
+    allow_origins=["*"],  # for testing (change to Vercel URL in production)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
+# Health check
 @app.get("/")
 def home():
     return {
         "message": "AI App Compiler Running"
     }
 
-
+# Main pipeline endpoint
 @app.post("/generate")
 def generate(payload: dict):
 
@@ -47,7 +47,7 @@ def generate(payload: dict):
 
     prompt = payload["prompt"]
 
-    # Ambiguity Check
+    # 1. Ambiguity Check
     ambiguity = check_ambiguity(prompt)
 
     if ambiguity["clarification_needed"]:
@@ -61,29 +61,28 @@ def generate(payload: dict):
             ]
         }
 
-    # Intent Extraction
+    # 2. Intent Extraction
     intent = extract_intent(prompt)
 
-    # Assumptions
+    # 3. Assumptions
     assumptions = generate_assumptions(intent)
 
-    # Decision Log
+    # 4. Decision Log
     decision_log = generate_decision_log(intent)
 
-    # Architecture Planning
+    # 5. Architecture Planning
     architecture = create_architecture(intent)
 
-    # Schema Generation
+    # 6. Schema Generation
     config = generate_config(architecture)
 
-    # Validation
+    # 7. Validation
     validation = validate_config(config)
 
     repairs = []
 
-    # Repair Engine
+    # 8. Repair Engine
     if not validation["valid"]:
-
         repaired = repair_config(
             config,
             validation["errors"]
@@ -92,10 +91,10 @@ def generate(payload: dict):
         config = repaired["config"]
         repairs = repaired["repairs"]
 
-    # Runtime Preview
+    # 9. Runtime Preview
     preview = runtime_preview(config)
 
-    # Metrics
+    # 10. Metrics
     metrics = generate_metrics(
         start_time,
         len(repairs),
