@@ -1,0 +1,112 @@
+{
+    "summary": {
+        "total_prompts": 20,
+        "success_count": 17,
+        "clarification_count": 3,
+        "failure_count": 0,
+        "success_rate_percent": 85.0,
+        "average_latency_ms": 7.31
+    },
+    "results": [
+        {
+            "prompt": "Build CRM with login contacts dashboard",
+            "status": "SUCCESS",
+            "latency_ms": 27.45
+        },
+        {
+            "prompt": "Build CRM with login contacts payments analytics",
+            "status": "SUCCESS",
+            "latency_ms": 5.88
+        },
+        {
+            "prompt": "Build LMS with students courses instructors",
+            "status": "SUCCESS",
+            "latency_ms": 7.76
+        },
+        {
+            "prompt": "Build Hospital Management System with doctors patients appointments",
+            "status": "SUCCESS",
+            "latency_ms": 6.1
+        },
+        {
+            "prompt": "Build Ecommerce app with products orders payments",
+            "status": "SUCCESS",
+            "latency_ms": 7.69
+        },
+        {
+            "prompt": "Build HRMS with employee attendance payroll",
+            "status": "SUCCESS",
+            "latency_ms": 6.72
+        },
+        {
+            "prompt": "Build Inventory Management System with products stock suppliers",
+            "status": "SUCCESS",
+            "latency_ms": 4.3
+        },
+        {
+            "prompt": "Build Event Management Platform with bookings and payments",
+            "status": "SUCCESS",
+            "latency_ms": 10.64
+        },
+        {
+            "prompt": "Build School Management System with students teachers classes",
+            "status": "SUCCESS",
+            "latency_ms": 6.32
+        },
+        {
+            "prompt": "Build SaaS platform with subscriptions and analytics",
+            "status": "SUCCESS",
+            "latency_ms": 4.66
+        },
+        {
+            "prompt": "Build something useful",
+            "status": "CLARIFICATION",
+            "latency_ms": 6.79
+        },
+        {
+            "prompt": "Create an application",
+            "status": "CLARIFICATION",
+            "latency_ms": 5.23
+        },
+        {
+            "prompt": "Build system",
+            "status": "CLARIFICATION",
+            "latency_ms": 0.0
+        },
+        {
+            "prompt": "Admin can and cannot access analytics",
+            "status": "SUCCESS",
+            "latency_ms": 12.47
+        },
+        {
+            "prompt": "CRM without users",
+            "status": "SUCCESS",
+            "latency_ms": 2.01
+        },
+        {
+            "prompt": "Role based access but no roles",
+            "status": "SUCCESS",
+            "latency_ms": 6.46
+        },
+        {
+            "prompt": "Build dashboard with no data source",
+            "status": "SUCCESS",
+            "latency_ms": 10.02
+        },
+        {
+            "prompt": "Payments without subscriptions",
+            "status": "SUCCESS",
+            "latency_ms": 5.17
+        },
+        {
+            "prompt": "Users can access admin pages",
+            "status": "SUCCESS",
+            "latency_ms": 2.36
+        },
+        {
+            "prompt": "Build platform with unknown requirements",
+            "status": "SUCCESS",
+            "latency_ms": 8.19
+        }
+    ]
+}

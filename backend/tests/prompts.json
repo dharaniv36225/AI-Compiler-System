@@ -1,0 +1,83 @@
+[
+    {
+        "type": "normal",
+        "prompt": "Build CRM with login contacts dashboard"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build CRM with login contacts payments analytics"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build LMS with students courses instructors"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build Hospital Management System with doctors patients appointments"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build Ecommerce app with products orders payments"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build HRMS with employee attendance payroll"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build Inventory Management System with products stock suppliers"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build Event Management Platform with bookings and payments"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build School Management System with students teachers classes"
+    },
+    {
+        "type": "normal",
+        "prompt": "Build SaaS platform with subscriptions and analytics"
+    },
+
+    {
+        "type": "edge",
+        "prompt": "Build something useful"
+    },
+    {
+        "type": "edge",
+        "prompt": "Create an application"
+    },
+    {
+        "type": "edge",
+        "prompt": "Build system"
+    },
+    {
+        "type": "edge",
+        "prompt": "Admin can and cannot access analytics"
+    },
+    {
+        "type": "edge",
+        "prompt": "CRM without users"
+    },
+    {
+        "type": "edge",
+        "prompt": "Role based access but no roles"
+    },
+    {
+        "type": "edge",
+        "prompt": "Build dashboard with no data source"
+    },
+    {
+        "type": "edge",
+        "prompt": "Payments without subscriptions"
+    },
+    {
+        "type": "edge",
+        "prompt": "Users can access admin pages"
+    },
+    {
+        "type": "edge",
+        "prompt": "Build platform with unknown requirements"
+    }
+]
